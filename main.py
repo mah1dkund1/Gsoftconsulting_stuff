@@ -1,20 +1,15 @@
-#below is some basic code for classes objects and constructors
+from parsers import FileParser
 
-class LogEntry:
+def main():
     
-    def __init__(self , timestamp , level , message):
-        
-        self.timestamp = timestamp
-        self.level = level
-        self.message = message
-        
+    print ("starting log analysis CLI...")
     
-    def display(self):
-        print(f"[{self.level}] {self.timestamp}: {self.message}")
-        
+    parser = FileParser("/logs/app.log")
+    entry = parser.parse()
     
-entry = LogEntry("2026-11-05 , 17:12" , "sUcESSFULL" , "working correctly")
-
-entry.display()
-        
     
+    print(entry)
+    
+    if __name__ == "__main__":
+        
+        main()
