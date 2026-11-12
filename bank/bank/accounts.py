@@ -72,6 +72,9 @@ class BankAccount:
        print(f"Successfully withdrew {withdraw_amount}. New balance: {self._balance}") 
         
    
+    def __str__(self):
+        
+        return f"Account {self.account_id} ({self.owner}): Balance ${self.balance}"
    
    
    
