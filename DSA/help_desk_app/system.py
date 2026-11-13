@@ -22,7 +22,7 @@ class HelpDesk:
         self.undo_stack = []
         
     
-    def raise_tickets(self, ticket_id, customer_name, issue):
+    def raise_ticket(self, ticket_id, customer_name, issue):
         
         #tuple for customer data
         ticket_record = (ticket_id, customer_name, issue)
@@ -51,7 +51,7 @@ class HelpDesk:
         if self.head is None:
             self.tail = None
             
-        self.resolve_history.append(resolved_record)
+        self.resolved_history.append(resolved_record)
         
         self.undo_stack.append(resolved_record)
         

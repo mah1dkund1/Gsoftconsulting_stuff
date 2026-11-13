@@ -22,7 +22,7 @@ def main():
             issue = input("Issue Description: ")
             desk.raise_ticket(ticket_counter, name, issue)
             
-            print(f"Ticket #{ticker_counter} raised for {name}.")
+            print(f"Ticket #{ticket_counter} raised for {name}.")
             ticket_counter +=1
             
         
