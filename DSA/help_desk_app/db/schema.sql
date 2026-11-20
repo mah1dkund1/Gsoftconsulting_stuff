@@ -52,3 +52,7 @@ CREATE TABLE ticket_events (
         CHECK (event_type IN ('add', 'serve', 'resolve', 'undo')),
     created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
 );
+
+
+CREATE INDEX idx_tickets_status_agent ON tickets (status, agent_id);
+CREATE INDEX idx_tickets_customer_status ON tickets (customer_id, status);
