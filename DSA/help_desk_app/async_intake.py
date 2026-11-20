@@ -2,7 +2,7 @@ import asyncio
 import time
 import asyncpg
 
-DB_DSN = "postgresql://postgres:password@localhost:5432/helpdesk"
+DB_DSN = "postgresql://postgres:password@localhost:5433/helpdesk"
 
 
 async def fetch_email_tickets(fail: bool = False) -> list[dict]:
